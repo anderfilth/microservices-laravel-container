@@ -1,5 +1,5 @@
 # Microservices Laravel Container
-If you need develop an Laravel application using Docker
+If you need develop an Laravel application using Docker.
 
 ## technologies
 - PHP 7.1
@@ -12,7 +12,11 @@ If you need develop an Laravel application using Docker
 
 ## Get starting
 Let's start, you must have installed **[Docker](https://docs.docker.com)** on your computer.
-And then, you clone this repository
+You can use the image on **[Docker Hub](https://hub.docker.com/repository/docker/anderfilth/microservices-laravel-container)**
+```
+docker run anderfilth/microservices-laravel-container
+```
+Or you can clone this repository
 ```sh
 $ git clone https://github.com/anderfilth/microservices-laravel-container.git
 ```
