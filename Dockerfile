@@ -8,6 +8,8 @@ WORKDIR /var/www
 RUN rm -rf /var/www/html
 RUN ln -s public html
 
+COPY --chown=www-data:www-data . /var/www
+
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
