@@ -38,6 +38,10 @@ services:
     container_name: nginx
     restart: always
     tty: true
+    entrypoint: dockerize -template /etc/nginx/conf.d/nginx.conf:/etc/nginx/conf.d/nginx.conf -wait tcp://app:9000 -timeout 40s nginx -g "daemon off;"
+    environment:
+      APP_HOST: app
+      APP_PORT: 9000
     ports:
       - "8000:80"
     volumes:
